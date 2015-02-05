@@ -3,7 +3,7 @@
 use Closure;
 use Exception;
 use Illuminate\Database\DatabaseManager;
-use Nesting\Services\RequestTranslator;
+use Aaronbullard\Nesting\Services\RequestTranslator;
 
 abstract class CheckIfNested {
 
