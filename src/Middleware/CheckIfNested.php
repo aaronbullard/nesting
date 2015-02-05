@@ -13,10 +13,10 @@ abstract class CheckIfNested {
 
 	protected $translator;
 
-	public function __construct(DatabaseManager $db, RequestTranslator $translator)
+	public function __construct(DatabaseManager $db)
 	{
 		$this->db = $db;
-		$this->translator = $translator;
+		$this->translator = new RequestTranslator(static::$parentUri, static::$childUri);
 	}
 
 	protected function getTable()
