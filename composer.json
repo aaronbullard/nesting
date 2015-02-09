@@ -12,8 +12,15 @@
     "require": {
         "php": ">=5.4.0",
         "illuminate/http": "~5.0",
-        "illuminate/database": "~5.0"
+        "illuminate/database": "~5.0",
+        "aaronbullard/exceptions": "dev-master"
     },
+    "repositories": [
+        {
+            "url": "https://github.com/aaronbullard/exceptions",
+            "type": "vcs"
+        }
+    ],
     "autoload": {
         "psr-4": {
             "Aaronbullard\\Nesting\\": "src/"

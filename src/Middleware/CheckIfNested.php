@@ -1,7 +1,7 @@
 <?php namespace Aaronbullard\Nesting\Middleware;
 
 use Closure;
-use Exception;
+use Aaronbullard\Exceptions\NotFoundException;
 use Illuminate\Database\DatabaseManager;
 use Aaronbullard\Nesting\Services\RequestTranslator;
 
@@ -56,7 +56,7 @@ abstract class CheckIfNested {
 
 		if( ! $exists )
 		{
-			throw new Exception("Nested resource was not found.");
+			throw new NotFoundException("Nested resource was not found.");
 		}
 
 		return $next($request);
